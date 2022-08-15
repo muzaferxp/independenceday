@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="hoistFlag()">Hoist</button>
+
+    <h2 id="heading"></h2>
+    <img id="image" src="1.png" style="width: 80vw;">
+
+    <script>
+
+        function hoistFlag() {
+
+            var flagImage = document.getElementById("image")
+
+            var heading = document.getElementById("heading")
+
+
+            flagImage.src = "2.png"
+
+            heading.textContent = "Hoisting Flag..."
+
+
+
+            setTimeout(function () {
+                flagImage.src = "3.png"
+            }, 2000)
+
+
+            setTimeout(function () {
+                flagImage.src = "4.png"
+            }, 4000)
+
+
+            setTimeout(function () {
+
+                flagImage.src = "5.png"
+
+                heading.textContent = "Happy independence day"
+
+            }, 5000)
+
+
+            setTimeout(function(){
+
+                window.location.href = "night.html"
+
+            }, 8000)
+
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
